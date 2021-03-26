@@ -29,14 +29,31 @@ namespace appE2Colsis.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHorario));
             this.lbHorario = new Guna.UI.WinForms.GunaLabel();
-            this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
+            this.cmbCurso = new Guna.UI.WinForms.GunaComboBox();
             this.lbCurso = new Guna.UI.WinForms.GunaLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
+            this.lblAsignatura = new Guna.UI.WinForms.GunaLabel();
+            this.cmbAsignatura = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.cmbDia = new Guna.UI.WinForms.GunaComboBox();
+            this.txthInicio = new Guna.UI.WinForms.GunaTextBox();
+            this.txthFinal = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.btnRegistrar = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.cmbCursoFiltrar = new Guna.UI.WinForms.GunaComboBox();
+            this.gdvFiltro = new System.Windows.Forms.DataGridView();
+            this.dgvResultado = new System.Windows.Forms.DataGridView();
+            this.hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lunes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Martes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Miercoles = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jueves = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Viernes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvFiltro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.SuspendLayout();
             // 
             // lbHorario
@@ -49,103 +66,276 @@ namespace appE2Colsis.Vista
             this.lbHorario.TabIndex = 0;
             this.lbHorario.Text = "Horario";
             // 
-            // gunaDataGridView1
+            // cmbCurso
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gunaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gunaDataGridView1.EnableHeadersVisualStyles = false;
-            this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.Location = new System.Drawing.Point(55, 88);
-            this.gunaDataGridView1.Name = "gunaDataGridView1";
-            this.gunaDataGridView1.RowHeadersVisible = false;
-            this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView1.Size = new System.Drawing.Size(715, 309);
-            this.gunaDataGridView1.TabIndex = 1;
-            this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.gunaDataGridView1.ThemeStyle.ReadOnly = false;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // gunaComboBox1
-            // 
-            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.Location = new System.Drawing.Point(99, 35);
-            this.gunaComboBox1.Name = "gunaComboBox1";
-            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.Size = new System.Drawing.Size(121, 26);
-            this.gunaComboBox1.TabIndex = 2;
+            this.cmbCurso.BackColor = System.Drawing.Color.Transparent;
+            this.cmbCurso.BaseColor = System.Drawing.Color.White;
+            this.cmbCurso.BorderColor = System.Drawing.Color.Silver;
+            this.cmbCurso.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCurso.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbCurso.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbCurso.ForeColor = System.Drawing.Color.Black;
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Location = new System.Drawing.Point(83, 96);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbCurso.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbCurso.Size = new System.Drawing.Size(121, 26);
+            this.cmbCurso.TabIndex = 2;
+            this.cmbCurso.SelectedIndexChanged += new System.EventHandler(this.cmbCurso_SelectedIndexChanged);
             // 
             // lbCurso
             // 
             this.lbCurso.AutoSize = true;
             this.lbCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbCurso.Location = new System.Drawing.Point(52, 40);
+            this.lbCurso.Location = new System.Drawing.Point(33, 101);
             this.lbCurso.Name = "lbCurso";
             this.lbCurso.Size = new System.Drawing.Size(41, 15);
             this.lbCurso.TabIndex = 3;
             this.lbCurso.Text = "Curso:";
             // 
+            // lblAsignatura
+            // 
+            this.lblAsignatura.AutoSize = true;
+            this.lblAsignatura.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblAsignatura.Location = new System.Drawing.Point(13, 133);
+            this.lblAsignatura.Name = "lblAsignatura";
+            this.lblAsignatura.Size = new System.Drawing.Size(64, 15);
+            this.lblAsignatura.TabIndex = 5;
+            this.lblAsignatura.Text = "Asignatura";
+            // 
+            // cmbAsignatura
+            // 
+            this.cmbAsignatura.BackColor = System.Drawing.Color.Transparent;
+            this.cmbAsignatura.BaseColor = System.Drawing.Color.White;
+            this.cmbAsignatura.BorderColor = System.Drawing.Color.Silver;
+            this.cmbAsignatura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbAsignatura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAsignatura.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbAsignatura.ForeColor = System.Drawing.Color.Black;
+            this.cmbAsignatura.FormattingEnabled = true;
+            this.cmbAsignatura.Location = new System.Drawing.Point(83, 128);
+            this.cmbAsignatura.Name = "cmbAsignatura";
+            this.cmbAsignatura.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbAsignatura.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbAsignatura.Size = new System.Drawing.Size(121, 26);
+            this.cmbAsignatura.TabIndex = 4;
+            this.cmbAsignatura.SelectedIndexChanged += new System.EventHandler(this.cmbAsignatura_SelectedIndexChanged);
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel2.Location = new System.Drawing.Point(36, 165);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(24, 15);
+            this.gunaLabel2.TabIndex = 7;
+            this.gunaLabel2.Text = "Dia";
+            // 
+            // cmbDia
+            // 
+            this.cmbDia.BackColor = System.Drawing.Color.Transparent;
+            this.cmbDia.BaseColor = System.Drawing.Color.White;
+            this.cmbDia.BorderColor = System.Drawing.Color.Silver;
+            this.cmbDia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDia.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbDia.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbDia.ForeColor = System.Drawing.Color.Black;
+            this.cmbDia.FormattingEnabled = true;
+            this.cmbDia.Location = new System.Drawing.Point(83, 160);
+            this.cmbDia.Name = "cmbDia";
+            this.cmbDia.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbDia.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbDia.Size = new System.Drawing.Size(121, 26);
+            this.cmbDia.TabIndex = 6;
+            // 
+            // txthInicio
+            // 
+            this.txthInicio.BaseColor = System.Drawing.Color.White;
+            this.txthInicio.BorderColor = System.Drawing.Color.Silver;
+            this.txthInicio.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txthInicio.FocusedBaseColor = System.Drawing.Color.White;
+            this.txthInicio.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txthInicio.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txthInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txthInicio.Location = new System.Drawing.Point(83, 193);
+            this.txthInicio.Name = "txthInicio";
+            this.txthInicio.PasswordChar = '\0';
+            this.txthInicio.SelectedText = "";
+            this.txthInicio.Size = new System.Drawing.Size(121, 30);
+            this.txthInicio.TabIndex = 8;
+            // 
+            // txthFinal
+            // 
+            this.txthFinal.BaseColor = System.Drawing.Color.White;
+            this.txthFinal.BorderColor = System.Drawing.Color.Silver;
+            this.txthFinal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txthFinal.FocusedBaseColor = System.Drawing.Color.White;
+            this.txthFinal.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txthFinal.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txthFinal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txthFinal.Location = new System.Drawing.Point(83, 229);
+            this.txthFinal.Name = "txthFinal";
+            this.txthFinal.PasswordChar = '\0';
+            this.txthFinal.SelectedText = "";
+            this.txthFinal.Size = new System.Drawing.Size(121, 30);
+            this.txthFinal.TabIndex = 9;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel1.Location = new System.Drawing.Point(12, 210);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(65, 15);
+            this.gunaLabel1.TabIndex = 10;
+            this.gunaLabel1.Text = "Hora Inicio";
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(13, 244);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(61, 15);
+            this.gunaLabel3.TabIndex = 11;
+            this.gunaLabel3.Text = "Hora Final";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.AnimationHoverSpeed = 0.07F;
+            this.btnRegistrar.AnimationSpeed = 0.03F;
+            this.btnRegistrar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.BorderColor = System.Drawing.Color.Black;
+            this.btnRegistrar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRegistrar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
+            this.btnRegistrar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRegistrar.Location = new System.Drawing.Point(39, 276);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRegistrar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.OnHoverImage = null;
+            this.btnRegistrar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRegistrar.Size = new System.Drawing.Size(160, 42);
+            this.btnRegistrar.TabIndex = 12;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel4.Location = new System.Drawing.Point(410, 115);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(41, 15);
+            this.gunaLabel4.TabIndex = 14;
+            this.gunaLabel4.Text = "Curso:";
+            // 
+            // cmbCursoFiltrar
+            // 
+            this.cmbCursoFiltrar.BackColor = System.Drawing.Color.Transparent;
+            this.cmbCursoFiltrar.BaseColor = System.Drawing.Color.White;
+            this.cmbCursoFiltrar.BorderColor = System.Drawing.Color.Silver;
+            this.cmbCursoFiltrar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbCursoFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCursoFiltrar.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbCursoFiltrar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbCursoFiltrar.ForeColor = System.Drawing.Color.Black;
+            this.cmbCursoFiltrar.FormattingEnabled = true;
+            this.cmbCursoFiltrar.Location = new System.Drawing.Point(460, 110);
+            this.cmbCursoFiltrar.Name = "cmbCursoFiltrar";
+            this.cmbCursoFiltrar.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbCursoFiltrar.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbCursoFiltrar.Size = new System.Drawing.Size(121, 26);
+            this.cmbCursoFiltrar.TabIndex = 13;
+            this.cmbCursoFiltrar.SelectedIndexChanged += new System.EventHandler(this.cmbCursoFiltrar_SelectedIndexChanged);
+            // 
+            // gdvFiltro
+            // 
+            this.gdvFiltro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdvFiltro.Location = new System.Drawing.Point(346, 165);
+            this.gdvFiltro.Name = "gdvFiltro";
+            this.gdvFiltro.Size = new System.Drawing.Size(452, 223);
+            this.gdvFiltro.TabIndex = 15;
+            // 
+            // dgvResultado
+            // 
+            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hora,
+            this.Lunes,
+            this.Martes,
+            this.Miercoles,
+            this.Jueves,
+            this.Viernes});
+            this.dgvResultado.Location = new System.Drawing.Point(346, 431);
+            this.dgvResultado.Name = "dgvResultado";
+            this.dgvResultado.Size = new System.Drawing.Size(774, 352);
+            this.dgvResultado.TabIndex = 16;
+            // 
+            // hora
+            // 
+            this.hora.HeaderText = "Hora";
+            this.hora.Name = "hora";
+            // 
+            // Lunes
+            // 
+            this.Lunes.HeaderText = "Lunes";
+            this.Lunes.Name = "Lunes";
+            // 
+            // Martes
+            // 
+            this.Martes.HeaderText = "Martes";
+            this.Martes.Name = "Martes";
+            // 
+            // Miercoles
+            // 
+            this.Miercoles.HeaderText = "Miercoles";
+            this.Miercoles.Name = "Miercoles";
+            // 
+            // Jueves
+            // 
+            this.Jueves.HeaderText = "Jueves";
+            this.Jueves.Name = "Jueves";
+            // 
+            // Viernes
+            // 
+            this.Viernes.HeaderText = "Viernes";
+            this.Viernes.Name = "Viernes";
+            // 
             // frmHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1432, 827);
+            this.Controls.Add(this.dgvResultado);
+            this.Controls.Add(this.gdvFiltro);
+            this.Controls.Add(this.gunaLabel4);
+            this.Controls.Add(this.cmbCursoFiltrar);
+            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.gunaLabel3);
+            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.txthFinal);
+            this.Controls.Add(this.txthInicio);
+            this.Controls.Add(this.gunaLabel2);
+            this.Controls.Add(this.cmbDia);
+            this.Controls.Add(this.lblAsignatura);
+            this.Controls.Add(this.cmbAsignatura);
             this.Controls.Add(this.lbCurso);
-            this.Controls.Add(this.gunaComboBox1);
-            this.Controls.Add(this.gunaDataGridView1);
+            this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.lbHorario);
             this.Name = "frmHorario";
             this.Text = "frmHorario";
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmHorario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gdvFiltro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,8 +344,26 @@ namespace appE2Colsis.Vista
         #endregion
 
         private Guna.UI.WinForms.GunaLabel lbHorario;
-        private Guna.UI.WinForms.GunaDataGridView gunaDataGridView1;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
+        private Guna.UI.WinForms.GunaComboBox cmbCurso;
         private Guna.UI.WinForms.GunaLabel lbCurso;
+        private Guna.UI.WinForms.GunaLabel lblAsignatura;
+        private Guna.UI.WinForms.GunaComboBox cmbAsignatura;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaComboBox cmbDia;
+        private Guna.UI.WinForms.GunaTextBox txthInicio;
+        private Guna.UI.WinForms.GunaTextBox txthFinal;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaButton btnRegistrar;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaComboBox cmbCursoFiltrar;
+        private System.Windows.Forms.DataGridView gdvFiltro;
+        private System.Windows.Forms.DataGridView dgvResultado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lunes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Martes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Miercoles;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jueves;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Viernes;
     }
 }
